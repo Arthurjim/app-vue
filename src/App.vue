@@ -1,6 +1,7 @@
 <template>
     <img alt="Vue logo" src="./assets/logo.png" />
-    <Counter />
+    <Counter message='Valor Al Cuadrado' start="15" />
+
 </template>
 
 <script>
