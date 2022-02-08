@@ -1,6 +1,6 @@
 <template>
     <img alt="Vue logo" src="./assets/logo.png" />
-    <Counter message='Valor Al Cuadrado' start="15" />
+    <Counter v-bind:start="99" message='Valor Al Cuadrado' />
 
 </template>
 

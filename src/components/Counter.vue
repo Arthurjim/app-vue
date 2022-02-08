@@ -11,7 +11,18 @@
 
 <script>
 export default {
-    props:['message', 'start'],
+    // props:['message', 'start'],
+    props:{
+        message:String,
+        start:{
+            type:Number,
+            // required:true,
+            default:100,
+            validator:function(value){
+                return value >=0
+            }
+        },
+    },
     // name: 'Counter',
 
     data() {
@@ -24,7 +35,7 @@ export default {
             return this.count * this.count;
         },
         increase() {
-            this.count++;
+            this.count = this.count + 1;
         },
         decrease() {
             this.count--;
