@@ -47,7 +47,7 @@ export default {
             return this.count * this.count;
         },
         customTitle(){
-            return this.message || 'Escribelo pls';
+            return this.message || 'Aquí va el titulo';
         }
     },
 };

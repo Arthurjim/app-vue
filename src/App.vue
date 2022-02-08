@@ -1,27 +1,25 @@
 <template>
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <Counter v-bind:start="99" message='Valor Al Cuadrado' />
-
+    <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
+    <Indecision />
 </template>
 
 <script>
-import Counter from "./components/Counter.vue";
-
+import Indecision from "./components/Indecision.vue";
 export default {
     name: "App",
     components: {
-        Counter,
+        Indecision,
     },
 };
 </script>
 
 <style>
 #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
+    -webkit-font-smoothing: antialiased;
     color: #2c3e50;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
     margin-top: 60px;
+    text-align: center;
 }
 </style>
