@@ -1,7 +1,7 @@
 <template>
     <h2>{{customTitle}}</h2>
-    <p>{{ count }}<sup>2</sup> ={{ squareCounter }}</p>
-
+    <p >{{ count }}<sup>2</sup> ={{ squareCounter }}</p>
+    <p data-testId="counter">{{count}}</p>
     <div>
         <button @click="increase">+</button>
         <button v-on:click="decrease">-</button>
@@ -16,7 +16,6 @@ export default {
         message:String,
         start:{
             type:Number,
-            // required:true,
             default:100,
             validator:function(value){
                 return value >=0
