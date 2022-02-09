@@ -38,6 +38,9 @@ export default {
     watch:{
         question(value,oldValue){
             this.isValidateQuestion = false
+
+            console.log({value})
+
             if(!value.includes('?'))return
 
             this.isValidateQuestion = true
