@@ -51,5 +51,15 @@ describe("Pruebas en el componente Indecision", () => {
         expect(wrapper.vm.answer).toBe("Si!");
     });
 
-   
+    test('Pruebas en getAnwer -Fallo en API', async () => {
+        //Hace el error en el fetch
+        fetch.mockImplementationOnce(()=>Promise.reject('Api is down'))
+        await wrapper.vm.getAnswer();
+
+        expect(wrapper.find("img").exists()).toBeFalsy();
+        expect(wrapper.vm.answer).toBe("Error en la api!");
+
+
+        
+     })
 });

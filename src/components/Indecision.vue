@@ -27,11 +27,17 @@ export default {
     },
     methods:{
        async getAnswer(){
+         
            this.answer = "Pensando..."
-          const {answer,image} =  await fetch('https://yesno.wtf/api')
+            try {
+            const {answer,image} =  await fetch('https://yesno.wtf/api')
             .then(res=> res.json())
-            this.answer = answer === 'yes' ? 'Si!' : 'No!'
-            this.img = image
+                this.answer = answer === 'yes' ? 'Si!' : 'No!'
+                this.img = image
+            } catch (error) {
+                console.log('Error')
+                this.answer = 'Error en la api!'                
+            }
         }
     },
     //Es para estar obsverando/pendiente a cambios
